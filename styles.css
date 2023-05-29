@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Iso&display=swap');
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.userLogin-container {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 1));
+}
+
+.search-bar {
+    width: 40px;
+    height: 35px;
+    opacity: 0;
+    transition: all .4s linear;
+    font-size: .8em;
+    outline: none;
+}
+
+#search-icon {
+    z-index: 1;
+    transition: all .4s linear;
+    cursor: pointer;
+}
+
+#close-searchBar{
+    cursor: pointer;
+    opacity: 0;
+}
+
+#user-icon {
+    cursor: pointer;
+}
+
+#push-cart {
+    font-size: 10px;
+}
+
+#delete-btn {
+    display: none;
+}
+
+.front-page {
+    width: 100%;
+    position: relative;
+}
+
+.front-page-image {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(circle, rgba(33, 37, 41), rgb(16, 18, 19));
+}
+
+.front-page-image>img {
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    box-shadow: 10px 0px 10px -5px rgba(0, 0, 0, 0.75),
+        -10px 0px 10px -5px rgba(0, 0, 0, 0.75);
+
+}
+
+.card-body-principal {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+}
+
+#cards-games-box {
+    background: inherit;
+}
+
+#card-item_game {
+    max-width: 350px;
+    height: auto;
+    box-shadow: 3px 3px 3px 2px #121212;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+#card-item_game>.card-body {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    border-radius: 5px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #121212;
+    padding: 0;
+}
+
+.img-games {
+    height: 200px;
+    max-width: 100%;
+    transition: filter .5s, object-view-box .5s;
+    object-view-box: inset(0%);
+    background-size: cover;
+    border-bottom: 2px dashed #ffc107;
+    overflow: hidden;
+}
+
+.card-body-bottom {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-title,
+.card-text,
+.avaibleIn- {
+    color: #ffc107;
+    text-shadow: 2px 2px 2px #000;
+    margin-bottom: 0;
+}
+
+.card-title {
+    padding: 10px;
+    margin: 0;
+}
+
+.card-text {
+    margin-left: 10px;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+    background-color: #000;
+    transition: all .3s linear;
+}
+
+.img-games-box:hover .img-games {
+    filter: blur(2px);
+    object-view-box: inset(10%);
+}
+
+#btn-box {
+    margin: 10px 0;
+}
+
+#btn-box>button {
+    text-shadow: 1px 1px 2px #121212;
+    font-size: 17px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 3px 1px #000;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 300px;
+    --bs-popover-border-color: var(--bs-black);
+    --bs-popover-header-bg: var(--bs-black);
+    --bs-popover-header-color: var(--bs-warning);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+
+#icons-platform-box {
+    display: none;
+    position: relative;
+    text-shadow: 1px 1px #000;
+    bottom: 65%;
+}
+
+.img-games-box:hover #icons-platform-box {
+    display: flex;
+    position: absolute;
+    animation: platform .4s linear;
+}
+
+@keyframes platform {
+    from {
+        left: 100%;
+        bottom: 65%;
+    }
+
+    to {
+        left: 0;
+        bottom: 65%;
+    }
+}
+
+#xbox-icon {
+    color: #18900D;
+}
+
+#steam-icon {
+    color: #1567AE;
+}
+
+#playstation-icon {
+    color: #000;
+}
+
+#addCart-game-alert {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#cart-btn:focus i {
+    transform: rotate(360deg);
+    transition: all .5s ease-in-out;
+}
+
+#cookies-modal {
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 1));
+}
+
+#jumpscare {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background-color: #000;
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap links and scripts -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/808/808439.png">
+    <script defer src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/jquery-3.6.1.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/ae5f71a2c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="script.js"></script>
+    <title>VG Store</title>
+</head>
+
+<body>
+    <img id="jumpscare" src="https://www.gifss.com/personas/hombres/caras/images/gif-cara-28.gif" alt="jumpscare">
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-warning px-4">
+            <div class="container-fluid">
+                <a class="navbar-brand text-black" href="#">VG Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title text-black" id="offcanvasNavbarLabel">VG Store</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-wrap justify-content-between align-items-start">
+                        <ul class="navbar-nav">
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
+                                <i class="fas fa-home text-primary"></i>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link text-black" href="#">Popular</a>
+                                <i class="fas fa-fire text-danger"></i>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link text-black" href="#">Offers</a>
+                                <i class="fas fa-tag text-success"></i>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-black" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Category
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Survival</a></li>
+                                    <li><a class="dropdown-item" href="#">Cars</a></li>
+                                    <li><a class="dropdown-item" href="#">Terror</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Other...</a></li>
+                                </ul>
+                            </li>
+                            <div class="d-flex align-items-center position-relative fs-4 searchBar-box"
+                                style="height: 40px; width: 40px;">
+                                <i id="search-icon" class="fas fa-search position-absolute start-50"></i>
+                                <span id="close-searchBar"
+                                    class="material-symbols-outlined fs-2 position-absolute start-100">
+                                    close
+                                </span>
+                                <input class="search-bar rounded-pill border-0 px-2" placeholder="Minecraft, Valheim..."
+                                    type="text">
+                            </div>
+                        </ul>
+                        <div class="d-flex align-items-center gap-5 fs-4" style="height: 40px;">
+                            <i id="listCart-icon" class="fas fa-shopping-cart position-relative">
+                                <span id="push-cart"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                </span>
+                            </i>
+                            <i id="user-icon" class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <section class="vh-100 gradient-custom userLogin-container">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center w-100 h-100">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <span
+                            class="material-symbols-outlined d-flex text-white fs-2 border-0 w-100 justify-content-end btn cursor-pointer"
+                            id="close-icon">
+                            close
+                        </span>
+                        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                            <div class="card-body p-5 text-center">
+
+                                <div class="mb-md-5 mt-md-4 pb-5">
+
+                                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+                                        <label class="form-label" for="typeEmailX">Email</label>
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <input type="password" id="typePasswordX"
+                                            class="form-control form-control-lg" />
+                                        <label class="form-label" for="typePasswordX">Password</label>
+                                    </div>
+
+                                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot
+                                            password?</a></p>
+
+                                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+
+                                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                                        <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                        <a href="#!" class="text-white"><i
+                                                class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                                        <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <p class="mb-0">Don't have an account? <a href="#!"
+                                            class="text-white-50 fw-bold">Sign Up</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="front-page">
+            <div class="front-page-image d-flex align-items-center justify-content-center">
+                <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Terraria.jpg"
+                    alt="terraria">
+            </div>
+            <div class="card-body-principal d-flex flex-column justify-content-center align-items-start">
+                <a href="#" class="navbar-brand text-white">
+                    <h3 class="card-title text-warning">Terraria</h3>
+                    <span class="card-text">5.99$</span>
+                    <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                        <button id="info-btn" class="btn btn-secondary me-2" data-container="body"
+                            data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-trigger="focus">Info
+                            <i class="fas fa-info-circle"></i>
+                        </button>
+                        <button id="cart-btn" data-id="" class="btn btn-warning">Add to cart
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </button>
+                        <button id="delete-btn" data-id="" class="btn btn-danger">Delete
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <section class="d-flex flex-column w-100 align-items-center bg-dark py-4">
+            <div class="bg-black p-3 col-md-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="m-0 breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="text-warning">VG Store</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="text-warning">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#" class="text-warning">...</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div id="cards-games-box" class="p-4 d-flex w-100 flex-wrap bg-dark rounded-0 justify-content-evenly gap-5">
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games"
+                                    src="https://gaming-cdn.com/images/products/1028/orig/7-days-to-die-pc-mac-juego-steam-cover.jpg?v=1648472552"
+                                    alt="bully">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">7 Days to Die</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">15.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-custom-class="custom-popover" data-bs-toggle="popover"
+                                    data-bs-placement="bottom" data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games" src="https://images7.alphacoders.com/105/1053663.jpg"
+                                    alt="bully">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">Bully</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">15.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games"
+                                    src="https://cdn.cloudflare.steamstatic.com/steam/apps/892970/capsule_616x353.jpg?t=1676365340"
+                                    alt="bully">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">Valheim</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">15.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games"
+                                    src="https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e"
+                                    alt="bully">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">Hogwarts Legacy</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">15.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games"
+                                    src="https://hb.imgix.net/35e1689e7634e948baab56601cd8879f5b06dd7b.jpeg?auto=compress,format&fit=crop&h=353&w=616&s=8a74e6a49b712d241d1dfb99415c4e0a"
+                                    alt="bully">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">Stardew Valley</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">12.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="card-item_game" class="card rounded-3 d-flex align-items-center border-0">
+                    <div class="navbar-brand text-white card-body">
+                        <div class="img-games-box">
+                            <a href="#" class="text-white">
+                                <img class="img-games"
+                                    src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft.jpg"
+                                    alt="minecraft">
+                                <div id="icons-platform-box" class="w-100 justify-content-evenly align-items-center">
+                                    <span class="avaibleIn fs-3">Avaible in:</span>
+                                    <i id="xbox-icon" class="fab fa-xbox fs-3 text"></i>
+                                    <i id="playstation-icon" class="fab fa-playstation fs-3 text"></i>
+                                    <i id="steam-icon" class="fab fa-steam fs-3 text"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body-bottom">
+                            <hgroup>
+                                <a href="#">
+                                    <h3 class="card-title">Minecraft</h3>
+                                </a>
+                                <h4 class="card-text border border-dark badge bg-danger rounded-pill">15.89$</h4>
+                            </hgroup>
+
+                            <div id="btn-box" class="d-flex w-100 justify-content-evenly">
+                                <button type="button" id="info-btn" class="btn btn-secondary" data-container="body"
+                                    data-bs-content="Este" data-bs-toggle="popover" data-bs-placement="bottom"
+                                    data-bs-trigger="focus">Info
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                                <button id="cart-btn" class="btn btn-warning">Add to cart
+                                    <i class="fas fa-cart-arrow-down"></i>
+                                </button>
+                                <button id="delete-btn" class="btn btn-danger">Delete
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="footer p-3 bg-warning">
+        <div class="d-flex flex-column align-items-center">
+            <div class="d-flex w-75 align-items-center justify-content-between">
+                <a class="navbar-brand fs-3" href="#">VG Store</a>
+                <ul class="navbar justify-content-evenly m-0">
+                    <li class="nav-item"><a href="#"><i class="fab fa-instagram text-danger-emphasis fs-3"></i></a></li>
+                    <li class="nav-item"><a href="#"><i class="fab fa-twitter fs-3"></i></a></li>
+                    <li class="nav-item"><a href="#"><i class="fab fa-youtube text-danger fs-3"></i></a></li>
+                </ul>
+            </div>
+            <hr class="d-flex w-75">
+        </div>
+    </footer>
+    <div id="addCart-game-alert" class="alert alert-success alert-dismissible p-1 fade show" role="alert">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="m-0 px-2">El juego se agrego al carrito</p>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="cookies-modal" class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cookies policy</h1>
+                </div>
+                <div class="modal-body">
+                    We use our own cookies and third-party cookies while browsing the web page in order to allow access
+                    functionalities of the web page extract trafic states and improve the user experience. For more
+                    information, you can consult our cookies policy.
+                </div>
+                <div class="modal-footer">
+                    <button id="close-cookies" type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                    <button id="accept-cookies" type="button" class="btn btn-primary">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
