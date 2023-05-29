@@ -1,4 +1,4 @@
-const videogames = [
+export const videogames = [
     {
         id: 1,
         title: "Terraria",
