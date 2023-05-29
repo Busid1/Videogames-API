@@ -2,7 +2,7 @@
   "name": "videogames-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "node index.js",
   "type": "module",
   "dependencies": {
     "bootstrap-icons": "^1.10.3",
