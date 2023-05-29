@@ -3,42 +3,42 @@ const videogames = [
         id: 1,
         title: "Terraria",
         price: "4.99$",
-        description: "Un juego de aventuras y construcción en 2D con elementos de exploración, combate y minería. Puedes crear tu propio mundo, luchar contra jefes y descubrir tesoros mientras te sumerges en un vasto y colorido universo."
+        description: "A 2D adventure and construction game with elements of exploration, combat, and mining. You can create your own world, fight bosses, and discover treasures as you immerse yourself in a vast and colorful universe."
     },
     {
         id: 2,
         title: "7 Days to Die",
         price: "3.78$",
-        description: "Un juego de supervivencia en un mundo postapocalíptico infestado de zombis. Debes recolectar recursos, construir refugios, fortificarte contra hordas de enemigos y buscar alimentos para sobrevivir durante los siete días más peligrosos."
+        description: "A survival game set in a post-apocalyptic world infested with zombies. You must gather resources, build shelters, fortify yourself against hordes of enemies, and search for food to survive during the most dangerous seven days."
     },
     {
         id: 3,
         title: "Bully",
         price: "3.12$",
-        description: "Es un juego de acción y aventuras en un entorno escolar. Interpretas a un estudiante problemático que debe navegar por los desafíos del internado, enfrentarse a matones y participar en diversas actividades dentro y fuera del campus."
+        description: "An action-adventure game set in a school environment. You play as a troubled student who must navigate the challenges of the boarding school, confront bullies, and participate in various activities on and off campus."
     },
     {
         id: 4,
         title: "Valheim",
         price: "10.89$",
-        description: "Es un juego de supervivencia y exploración en un mundo abierto inspirado en la mitología nórdica. Exploras un vasto paisaje generado de forma procedural, construyes refugios, cazas criaturas fantásticas y te embarcas en aventuras épicas mientras avanzas en la jerarquía de los dioses."
+        description: "A survival and exploration game in an open world inspired by Norse mythology. You explore a vast procedurally generated landscape, build shelters, hunt fantastic creatures, and embark on epic adventures as you progress through the hierarchy of the gods."
     },
     {
         id: 5,
-        title: "Hogwards Legacy",
+        title: "Hogwarts Legacy",
         price: "37.99$",
-        description: "Es un juego de rol de acción basado en el mundo mágico de Harry Potter. Ambientado en la escuela de magia y hechicería de Hogwarts en el siglo XIX, los jugadores podrán explorar el castillo, aprender hechizos, enfrentarse a criaturas mágicas y descubrir secretos en un emocionante viaje."
+        description: "An action role-playing game based on the magical world of Harry Potter. Set in Hogwarts School of Witchcraft and Wizardry in the 19th century, players can explore the castle, learn spells, face magical creatures, and uncover secrets on an exciting journey."
     },
     {
         id: 6,
         title: "Stardew Valley",
         price: "8.71$",
-        description: "Es un juego de simulación de granja que te permite escapar de la ciudad y comenzar una nueva vida en el campo. Cultiva cultivos, cuida animales, socializa con los aldeanos, pesca, mina y descubre los misterios de la encantadora y relajante vida rural."
+        description: "A farm simulation game that allows you to escape the city and start a new life in the countryside. Cultivate crops, care for animals, socialize with villagers, fish, mine, and uncover the mysteries of the charming and relaxing rural life."
     },
     {
         id: 7,
         title: "Minecraft",
         price: "18.55$",
-        description: "Es un juego de construcción y exploración en un mundo abierto compuesto por bloques. Tienes la libertad de construir estructuras, explorar vastas tierras, extraer recursos y enfrentarte a enemigos en diferentes modos de juego, ya sea en solitario o en multijugador."
+        description: "A construction and exploration game set in an open world made up of blocks. You have the freedom to build structures, explore vast lands, extract resources, and confront enemies in different game modes, whether solo or multiplayer."
     }
 ]
